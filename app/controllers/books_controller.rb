@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   
   def index
     @new_book = Book.new
-    @book = Book.all
+    @books = Book.all
   end
 
   def show
@@ -16,7 +16,7 @@ class BooksController < ApplicationController
   end
   
   def create
-    book = book.new(book_params)
+    book = Book.new(book_params)
     book.save
     redirect_to books_path
   end
